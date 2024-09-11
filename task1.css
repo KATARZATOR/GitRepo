@@ -1,0 +1,138 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #C4C4C4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    position: relative;
+    width: 500px; 
+    font-size: 36px;
+}
+
+#search {
+    width: 100%;
+    padding: 10px;
+    font-size: 36px;
+    height: 61px; 
+    border: none; 
+    border-radius: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.autocomplete-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 2px solid black;
+    border-top: none; 
+    width: 100%;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #E3E3E3;
+    z-index: 1000;
+}
+
+.autocomplete-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+    background-color: #E3E3E3;
+    height: 44px; 
+    display: flex;
+    font-size: 30px;
+    align-items: center; 
+}
+
+.autocomplete-item:hover {
+    background-color: #5fbff9; 
+}
+
+.repo-list-container {
+    width: 500px; 
+    background-color: #E387E5;
+    margin-top: 20px;
+    border-radius: 0;
+    display: none; 
+}
+
+.repo-item {
+    background-color: #E387E5;
+    border: 1px solid black;
+    height: 100px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+
+}
+
+.repo-item div {
+    flex: 1;
+
+    padding-right: 10px; 
+}
+
+.repo-item span {
+    display: block;
+}
+
+.remove-btn {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    color: darkred;
+}
+#repo-list{
+    margin:0;
+    padding:0;
+}
+span{
+    padding-left: 16px;
+}
+.remove-btn {
+    position: relative;
+    width: 42px; 
+    height: 39px; 
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 34px;
+}
+
+.remove-btn::before, .remove-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 42px;
+    background-color: #FF0000; 
+    transform-origin: center;
+}
+
+.remove-btn::before {
+    transform: translate(-50%, -50%) rotate(45deg); 
+}
+
+.remove-btn::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.remove-btn:hover::before, .remove-btn:hover::after {
+    background-color: darkred;
+}
