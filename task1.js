@@ -34,6 +34,7 @@ function updateAutocompleteList(repositories) {
         listItem.addEventListener('click', () => {
             addRepoToList(repo);
             searchInput.value = ''; 
+            autocompleteList.innerHTML = '';
             autocompleteList.classList.add('hidden'); 
         });
         autocompleteList.appendChild(listItem);
